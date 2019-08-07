@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Player Stats</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://semantic-ui.com/javascript/library/tablesort.js"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <link rel='shortcut icon' type='image/x-icon' href='https://gamepedia.cursecdn.com/fortnite_gamepedia/6/64/Favicon.ico'
+  />
+</head>
+
+<body>
+  <div style="text-align: center;" class="ui inverted segment">
+    <h2 class="ui green inverted header">SOLO</h2>
+  </div>
+
+  <table class="ui selectable inverted sortable celled table">
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Played</th>
+        <th>Wins</th>
+        <th>Top 10s</th>
+        <th>Top 25s</th>
+        <th>K/D</th>
+        <th>Kills</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%   
+      var i;
+      for (i = 0; i < JSONdata.length; i++) { 
+    
+      let nickname = JSONdata[i]["epicUserHandle"];
+      let soloPlayed = JSONdata[i]["stats"]["p2"]["matches"].value;
+      let soloWins = JSONdata[i]["stats"]["p2"]["top1"].value;
+      let top10 = JSONdata[i]["stats"]["p2"]["top10"].value;
+      let top25 = JSONdata[i]["stats"]["p2"]["top25"].value;
+      let kd = JSONdata[i]["stats"]["p2"]["kd"].value;
+      let kills = JSONdata[i]["stats"]["p2"]["kills"].value; %>
+
+        <tr style="text-align: center; ">
+          <td>
+            <%= nickname %>
+          </td>
+          <td>
+            <%= soloPlayed %>
+          </td>
+          <td>
+            <%= soloWins %>
+          </td>
+          <td>
+            <%= top10 %>
+          </td>
+          <td>
+            <%= top25 %>
+          </td>
+          <td>
+            <%= kd %>
+          </td>
+          <td>
+            <%= kills %>
+          </td>
+        </tr>
+        <% } %>
+    </tbody>
+  </table>
+
+  <div style="text-align: center; " class="ui inverted segment ">
+    <h2 class="ui orange inverted header ">DUO</h2>
+  </div>
+
+  <table class="ui selectable inverted sortable celled table">
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Played</th>
+        <th>Wins</th>
+        <th>Top 5s</th>
+        <th>Top 12s</th>
+        <th>K/D</th>
+        <th>Kills</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <%   
+      var i;
+      for (i = 0; i < JSONdata.length; i++) { 
+
+        let nickname = JSONdata[i]["epicUserHandle"];
+        let duoPlayed = JSONdata[i]["stats"]["p10"]["matches"].value;
+        let duoWins = JSONdata[i]["stats"]["p10"]["top1"].value;
+        let duotop10 = JSONdata[i]["stats"]["p10"]["top5"].value;
+        let duotop25 = JSONdata[i]["stats"]["p10"]["top12"].value;
+        let duokd = JSONdata[i]["stats"]["p10"]["kd"].value;
+        let duokills = JSONdata[i]["stats"]["p10"]["kills"].value; %>
+
+
+        <tr style="text-align: center; ">
+          <td>
+            <%= nickname %>
+          </td>
+          <td>
+            <%= duoPlayed %>
+          </td>
+          <td>
+            <%= duoWins %>
+          </td>
+          <td>
+            <%= duotop10 %>
+          </td>
+          <td>
+            <%= duotop25 %>
+          </td>
+          <td>
+            <%= duokd %>
+          </td>
+          <td>
+            <%= duokills %>
+          </td>
+        </tr>
+        <% } %>
+    </tbody>
+  </table>
+
+
+  <div style="text-align: center; " class="ui inverted segment ">
+    <h2 class="ui red inverted header ">SQUAD</h2>
+  </div>
+
+  <table class="ui selectable inverted sortable celled table">
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Played</th>
+        <th>Wins</th>
+        <th>Top 3s</th>
+        <th>Top 6s</th>
+        <th>K/D</th>
+        <th>Kills</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <%   
+      var i;
+      for (i = 0; i < JSONdata.length; i++) { 
+    
+        let nickname = JSONdata[i]["epicUserHandle"];
+        let quadPlayed = JSONdata[i]["stats"]["p9"]["matches"].value;
+        let quadWins = JSONdata[i]["stats"]["p9"]["top1"].value;
+        let quadtop10 = JSONdata[i]["stats"]["p9"]["top3"].value;
+        let quadtop25 = JSONdata[i]["stats"]["p9"]["top6"].value;
+        let quadkd = JSONdata[i]["stats"]["p9"]["kd"].value;
+        let quadkills = JSONdata[i]["stats"]["p9"]["kills"].value; %>
+
+
+
+        <tr style="text-align: center; ">
+          <td>
+            <%= nickname %>
+          </td>
+          <td>
+            <%= quadPlayed %>
+          </td>
+          <td>
+            <%= quadWins %>
+          </td>
+          <td>
+            <%= quadtop10 %>
+          </td>
+          <td>
+            <%= quadtop25 %>
+          </td>
+          <td>
+            <%= quadkd %>
+          </td>
+          <td>
+            <%= quadkills %>
+          </td>
+        </tr>
+        <% } %>
+    </tbody>
+  </table>
+
+  <div style="text-align: center; " class="ui inverted segment ">
+    <h2 class="ui purple inverted header ">ALL TIME</h2>
+  </div>
+
+  <table class="ui last inverted sortable selectable celled table" style="margin: 0;">
+    <thead>
+      <tr>
+        <th>Player</th>
+        <th>Played</th>
+        <th>Wins</th>
+        <th>Score</th>
+        <th>Win %</th>
+        <th>K/D</th>
+        <th>Kills</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <%   
+        var i;
+        for (i = 0; i < JSONdata.length; i++) { 
+
+          var lifeTimeStats = JSONdata[i]["lifeTimeStats"];
+
+          function CallbackFunctionToFindTaskById(task) {
+            return task.key === this.Type;
+          }
+          
+          var kdObj = lifeTimeStats.find(CallbackFunctionToFindTaskById, {
+            Type: "K/d"
+          });
+          var allKd = kdObj.value;
+          
+          var killsObj = lifeTimeStats.find(CallbackFunctionToFindTaskById, {
+            Type: "Kills"
+          });
+          var allKills = killsObj.value;
+          
+          var mtchsObj = lifeTimeStats.find(CallbackFunctionToFindTaskById, {
+            Type: "Matches Played"
+          });
+          var allPlayed = mtchsObj.value;
+
+          var mtchsObj = lifeTimeStats.find(CallbackFunctionToFindTaskById, {
+            Type: "Wins"
+          });
+          var allWins = mtchsObj.value;
+
+          var mtchsObj = lifeTimeStats.find(CallbackFunctionToFindTaskById, {
+            Type: "Score"
+          });
+          var allScore = mtchsObj.value;
+      
+          let nickname = JSONdata[i]["epicUserHandle"];
+
+          var winRatio = (allWins / allPlayed * 100).toFixed(2); %>
+
+        <tr style="text-align: center; ">
+          <td>
+            <%= nickname %>
+          </td>
+          <td>
+            <%= allPlayed %>
+          </td>
+          <td>
+            <%= allWins %>
+          </td>
+          <td>
+            <%= allScore %>
+          </td>
+          <td>
+            <%= winRatio %>
+          </td>
+          <td>
+            <%= allKd %>
+          </td>
+          <td>
+            <%= allKills %>
+          </td>
+        </tr>
+        <% } %>
+    </tbody>
+  </table>
+
+  <style>
+    html {
+      padding: 100px 350px;
+      background-image: url("https://i.imgur.com/Rzs9kCa.jpg");
+      background-position: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100vw;
+      height: auto;
+    }
+
+    thead {
+      text-align: center;
+    }
+
+    div.segment {
+      margin: 0px!important;
+    }
+
+    * {
+      border-radius: 0!important;
+    }
+  </style>
+  <script>
+    $('table').DataTable({
+      paging: false,
+      searching: false,
+      info: false,
+      order: [[6, "desc"]]
+    });
+  </script>
+</body>
+
+</html>
