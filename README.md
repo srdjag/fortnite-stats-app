@@ -9,8 +9,7 @@ Here is on how to get started with this Node.js Fortnite tracker on your local m
 
 To use is on a server, you will need a VPS with Nginx installed and properly configured with proxies, *which is not covered in this readme.*
 
-[DEMO](https://web.archive.org/web/20180512010652/http://www.fortnite.srdjagunjic.com/)
-*this ia Wayback Machine demo as I currently do not have VPS setup with this app*
+[Live Demo](https://fortnite-tracker-srdja.herokuapp.com/)
 
 ### Prerequisites
 
