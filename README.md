@@ -7,15 +7,12 @@
 
 Here is on how to get started with this Node.js Fortnite tracker on your local machine.
 
-To use is on a server, you will need a VPS with Nginx installed and properly configured with proxies, *which is not covered in this readme.*
-
 [Live Demo](https://fortnite-tracker-srdja.herokuapp.com/)
 
 ### Prerequisites
 
 ```
- - Node.js
- - npm
+ - A server that can run Node.js
  - FortniteTracker API key
 ```
 FortniteTracker API key can be created here [https://fortnitetracker.com/site-api](https://fortnitetracker.com/site-api)
