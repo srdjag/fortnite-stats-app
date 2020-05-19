@@ -9,6 +9,10 @@ Here is on how to get started with this Node.js Fortnite tracker on your local m
 
 [Live Demo](https://fortnite-tracker-srdja.herokuapp.com/)
 
+### Screenshot
+
+![image](https://user-images.githubusercontent.com/53865216/82270393-f9894380-9974-11ea-8814-3e0a59ba51de.png)
+
 ### Prerequisites
 
 ```
